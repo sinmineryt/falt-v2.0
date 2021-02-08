@@ -4,7 +4,7 @@ const config = require("./config.json");
 const client = new Discord.Client();
 
 client.on('message', message => {
-  if (message.content === '+ping') {  
+  if (message.content === 'f.ping') {  
     message.channel.send(`Latency is ${Date.now() - message.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms`);
   }
 });
