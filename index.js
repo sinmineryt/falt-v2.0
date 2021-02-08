@@ -9,4 +9,15 @@ client.on('message', message => {
   }
 });
 
+client.on("ready", () =>{
+    console.log(`Logged in as ${client.user.tag}!`);
+    client.user.setPresence({
+        status: "online",  //You can show online, idle....
+        game: {
+            name: "https://site.falt.ml",  //The message shown
+            type: "WATCHING" //STREAMING: PLAYING: WATCHING: LISTENING: STREAMING:
+        }
+    });
+ });
+
 client.login(config.BOT_TOKEN);
